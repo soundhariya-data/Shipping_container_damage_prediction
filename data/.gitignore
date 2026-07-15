@@ -8,7 +8,7 @@ __pycache__/
 .pytest_cache/
 
 # Data files (too large for GitHub)
-data/
+
 *.csv
 
 # Jupyter checkpoints
