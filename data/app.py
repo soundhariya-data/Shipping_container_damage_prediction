@@ -14,6 +14,8 @@ from prophet_analysis import (
     PORT_COORDINATES
 )
 from google import genai
+from dotenv import load_dotenv
+load_dotenv()
 
 # ═══════════════════════════════════════════════════════════════
 # CONFIG
@@ -24,7 +26,7 @@ st.set_page_config(
     layout     = "wide"
 )
 
-GOOGLE_API_KEY = "AIzaSyBhhf5oBVqLEMwzVZ3U96wKoa7Sy0OtMAU"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 client = genai.Client(api_key=GOOGLE_API_KEY)
 
 # ═══════════════════════════════════════════════════════════════
